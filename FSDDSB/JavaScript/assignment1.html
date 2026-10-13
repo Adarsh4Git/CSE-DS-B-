@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="border: 2px solid red; background-color: antiquewhite; height: 500px; width: 500px; justify-content: center; align-items: center;">
+        <h1><center>Online Shop</center</h1> <br>
+            <h3>Tea     :   120</h3>
+            <h3>Coffee  :   500</h3>
+            <h3>Rice    :   600</h3>
+            <h3>Sugar   :   700</h3>
+            <br><br>
+            <button onclick="buy()">Buy</button>
+    </div>
+
+    <script>
+        function buy(){
+            let a = prompt("Enter Your Product Name:")
+            let b = prompt("Enter Quantity(in Kg):")
+        }
+        <script>
+       const product={
+        Tea     :   120,
+        Coffee  :   500,
+        Rice    :   600,
+        Sugar   :   700
+       }
+       for(let x in product){
+        document.write(x);
+        document.write(":"+product[x]+" ");
+        document.write("<br>")
+       }
+    </script>
+    </script>
+    
+</body>
+</html>

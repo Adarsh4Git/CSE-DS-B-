@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+    <h1 id="while"></h1>
+    <script>
+        // <!--  FOR LOOP -->
+        for(let i=0; i<5; i++){
+            document.write("Hello") + "<br>";
+        }
+
+        // ARRAY
+        const car = ["Car1", "Car2", "Car3"];   // const/let/var
+        let len = car.length;
+        let text=" ";
+        for(let i=0; i<len; i++){
+            if(i%2 == 0) text+=car[i]+"<br>";
+        }
+        document.getElementById("demo").innerHTML= text;    //jo bhi demo id hai uske innerHTML me text jakr likh do
+
+        "<br>"
+
+
+
+        // WHILE LOOP
+        let i=1;
+        texxt = " "
+        while(i<5){
+            document.write("<br> Helloo");   
+            i++;
+        }// use getElementBYID to print
+
+        
+
+    </script>
+</body>
+</html>

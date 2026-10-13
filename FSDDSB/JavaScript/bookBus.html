@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus booking syatem</title>
+</head>
+<body>
+    <div style="border: 2px solid red; background-color: gray; padding: 20px;">
+        <center>
+            <h1>BOOK YOUR TRIP</h1>
+        </center>
+        
+        <div>
+            <form action="">
+            <h3>User Information</h3>
+        <p>Name : <input type="text"></p>
+    
+
+        <p>Select your destination : <select name="" id="destination">
+            <option value="Kolkata">Kolkata</option>
+            <option value="Goa">Goa</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Surat">Surat</option>
+            <option value="Varanasi">Varanasi</option>
+            <option value="Tiruvantpuram">Tiruvantpuram</option>
+        </select></p>
+
+        <p>Enter your age : <input type="number"></p>
+        <p>Enter your aadhar number :  <input type="tel" maxlength="12"></p>
+        </form>
+        </div>
+
+        <br><br>
+
+        <h3>Booking Options</h3>
+
+        <div>
+            <form action="">
+                <p>Select Bus Type: </p>
+                <input type="radio" id="AC" name="busType" value="AC">
+                <label for="AC">AC</label>
+                <br>
+                <input type="radio" id="nAC" name="busType" value="Non AC">
+                <label for="nAC">Non-AC</label>
+
+                <p>Select Berth : <select name="" id="berth">
+                    <option value="Upper">Upper</option>
+                    <option value="Lower">Lower</option>
+                </select></p>
+
+            </form>
+
+            <button type="button" onclick="calAmount()">Calculate Amount
+                 </button>
+                 <h2 id="amount"></h2>
+
+        </div>
+        
+    </div>
+
+
+    <script>
+
+        function calAmount(){
+            let destination = document.getElementById("destination").value;
+            let busType = document.querySelector('input[name="busType"]:checked').value;
+            let berth = document.getElementById("berth").value;
+
+            let amount = 0;
+
+
+            // Destination Charge
+            if(destination == "Kolkata"){
+                amount = 700;
+            }
+            else if(destination == "Goa"){
+                amount = 1300;
+            }
+            else if(destination == "Mumbai"){
+                amount = 950;
+            }
+            else if(destination == "Surat"){
+                amount = 750;
+            }
+            else if(destination == "Varanasi"){
+                amount = 400;
+            }
+            else if(destination == "Tiruvantpuram"){
+                amount = 1700;
+            }
+
+            // Bus TYpe Charge
+            if(busType == "AC"){
+                amount+=300;
+            }
+
+            // Birth Charge
+            if(berth == "Upper"){
+                amount+= 100;
+            }
+            else if(berth == "Lower"){
+                amount += 150;
+            }
+
+            document.getElementById("amount").innerText = 
+            "Net Amount to be Paid: ₹" + amount;
+        }
+
+    </script>
+</body>
+</html>
